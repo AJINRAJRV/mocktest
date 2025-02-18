@@ -7,7 +7,7 @@ const OtpRequest = ({ setShowOtpForm }) => {
   const sendOtp = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:3000/auth/send-otp", { email });
+      await axios.post("https://mocktest-backend-imod.onrender.com/auth/send-otp", { email });
       localStorage.setItem("email", email); // Store email for verification step
       setShowOtpForm(true);
     } catch (error) {
